@@ -1,0 +1,848 @@
+{
+	"info": {
+		"_postman_id": "36f5fe74-2ac2-47e5-9a48-8734c632bbb9",
+		"name": "LET'S-KANBAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23040083"
+	},
+	"item": [
+		{
+			"name": "LETS'S-KANBAN",
+			"item": [
+				{
+					"name": "USER",
+					"item": [
+						{
+							"name": "findAll users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find user pelo id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user/user/639e2f84d829892bb822dfdf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user",
+										"639e2f84d829892bb822dfdf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "criar cadastro",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Leticia Medeiros\",\r\n    \"email\": \"leticia@hotmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "atualiza cadastro",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"639e2f84d829892bb822dfdf\",\r\n    \"name\": \"Leticia Medeiros\",\r\n    \"email\": \"leticia@hotmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/user/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete cadastro",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user/user/delete/639e2f84d829892bb822dfdf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user",
+										"delete",
+										"639e2f84d829892bb822dfdf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "criar quadro",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Trabalho Microservices - Camillo - 30pts\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/user/639e34a7b1a4955d7d8d6570/criar/quadro",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user",
+										"639e34a7b1a4955d7d8d6570",
+										"criar",
+										"quadro"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "atualiza quadro",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"639e2fdde1ac4f5b5370c161\",\r\n    \"name\":\"test board 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/user/639e2f84d829892bb822dfdf/update/quadro",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user",
+										"639e2f84d829892bb822dfdf",
+										"update",
+										"quadro"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete quadro",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"639e1b017d63866d7dfc2848\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/user/639e2fdde1ac4f5b5370c161/delete/quadro",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user",
+										"639e2fdde1ac4f5b5370c161",
+										"delete",
+										"quadro"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "criar card",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"microservicos\",\r\n    \"descricao\": \"Implementar Git RabbitMQ\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/user/639e34a7b1a4955d7d8d6570/criar/card",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user",
+										"639e34a7b1a4955d7d8d6570",
+										"criar",
+										"card"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "atualiza card",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"639e188c577d687679b28ccf\",\r\n    \"titulo\": \"test 654987654\",\r\n    \"descricao\": \"fazer o test123 melhor sempre e assim em diante.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/user/639e17dfcb0f6a7f7338a298/update/card",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user",
+										"639e17dfcb0f6a7f7338a298",
+										"update",
+										"card"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete card",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"639e188c577d687679b28ccf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/user/639e17dfcb0f6a7f7338a298/delete/card",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user",
+										"639e17dfcb0f6a7f7338a298",
+										"delete",
+										"card"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "mover card de fila",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"639e188c577d687679b28ccf\",\r\n    \"status\": \"FINALIZADO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/user/639e17dfcb0f6a7f7338a298/update/card/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"user",
+										"639e17dfcb0f6a7f7338a298",
+										"update",
+										"card",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find card by criador",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/card/card/criador/639e17dfcb0f6a7f7338a298",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"card",
+										"card",
+										"criador",
+										"639e17dfcb0f6a7f7338a298"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "QUADRO",
+					"item": [
+						{
+							"name": "findAll quadros",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/quadro/quadro",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"quadro",
+										"quadro"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find quadro pelo id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/quadro/quadro/639d6307cd715c6c0122cb2b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"quadro",
+										"quadro",
+										"639d6307cd715c6c0122cb2b"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CARD",
+					"item": [
+						{
+							"name": "findAll cards",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/card/card",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"card",
+										"card"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find card pelo id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/card/card/639d66a7fd635b45c01a7229",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"card",
+										"card",
+										"639d66a7fd635b45c01a7229"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GIT REPO",
+					"item": [
+						{
+							"name": "EUREKA",
+							"item": [
+								{
+									"name": "GET CONFIGS",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/eureka/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"eureka",
+												"default"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "REFHRESH CONFIGS",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8761/actuator/refresh",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8761",
+											"path": [
+												"actuator",
+												"refresh"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "GATEWAY",
+							"item": [
+								{
+									"name": "GET CONFIGS",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/gateway/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"gateway",
+												"default"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "REFHRESH CONFIGS",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/gateway/actuator/refresh",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"gateway",
+												"actuator",
+												"refresh"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "QUADRO",
+							"item": [
+								{
+									"name": "GET CONFIGS",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/quadro/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"quadro",
+												"default"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "REFHRESH CONFIGS",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/quadro/actuator/refresh",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"quadro",
+												"actuator",
+												"refresh"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "USER",
+							"item": [
+								{
+									"name": "GET CONFIGS",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/user/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"user",
+												"default"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "REFHRESH CONFIGS",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/user/actuator/refresh",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"user",
+												"actuator",
+												"refresh"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "LOG",
+							"item": [
+								{
+									"name": "GET CONFIGS",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/log/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"log",
+												"default"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET CONFIGS",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/log/actuator/refresh",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"log",
+												"actuator",
+												"refresh"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "LOG",
+					"item": [
+						{
+							"name": "find all logs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/log/log",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log",
+										"log"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find log by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/log/log/639d2d9523ccc64bb764e476",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log",
+										"log",
+										"639d2d9523ccc64bb764e476"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find log by action",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/log/log/action/ADD",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log",
+										"log",
+										"action",
+										"ADD"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find log by userName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/log/log/user/letícia",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log",
+										"log",
+										"user",
+										"letícia"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find log by dataLog",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/log/log/2022-12-17T02:46:39.701+00:00",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log",
+										"log",
+										"2022-12-17T02:46:39.701+00:00"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find log by cardStatus",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/log/log/card/PENDENTE",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log",
+										"log",
+										"card",
+										"PENDENTE"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
